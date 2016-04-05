@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Simple Recipes</title>
+    
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/simple_sidebar.css" rel="stylesheet">
+    <link href="../css/font-awesome.css" rel="stylesheet">
+    <link href="../css/thumbnail-gallery.css" rel="stylesheet">
+     <link href="../css/flip_container.css" rel="stylesheet">
+
+
+	
+    
+    
+  
+</head>
+
+<style>
+    ul li img {
+          cursor: pointer;
+      }
+	.modal-body {
+		padding:5px !important;
+	}
+    .modal-content {
+        border-radius:0;
+    }
+    .modal-dialog img {
+        text-align:center;
+        margin:0 auto;
+    }
+    .controls{          
+        width:50px;
+        display:block;
+        font-size:11px;
+        padding-top:8px;
+        font-weight:bold;          
+    }
+    .next {
+        float:right;
+        text-align:right;
+    }
+ 
+    /*override modal for demo only*/
+    .modal-dialog {
+        max-width:500px;
+        padding-top: 90px;
+    }
+    @media screen and (min-width: 768px){
+        .modal-dialog {
+         	width:500px;
+            padding-top: 90px;
+        }          
+    }
+    @media screen and (max-width:1500px){
+        #ads {
+        	display:none;
+        }
+    }
+  </style>
+
+
+<body>
+    <nav class="navbar navbar-default no-margin navbar-fixed-top">
+    <!-- Brand and toggle get grouped for better mobile display -->    
+	    <div class="navbar-header fixed-brand">
+        	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"  id="menu-toggle">
+            	<span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+            </button>
+            <a class="navbar-brand" href="#"><i class="fa fa-rocket fa-4"></i> SIMPLE RECIPES</a>
+        </div><!-- navbar-header-->
+ 
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+            	<li class="active" ><button class="navbar-toggle collapse in" data-toggle="collapse" id="menu-toggle-2"> <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></button></li>
+            </ul>
+        </div><!-- bs-example-navbar-collapse-1 -->
+
+    </nav>
+    
+    <div id="wrapper">
+    	<!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+ 
+                <li class="active">
+                    <a href="#ingredients"><span class="fa-stack fa-lg pull-left"><i class="fa fa-dashboard fa-stack-1x "></i></span> Ingredients</a>
+                       <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                        <li><a href="#">Meat</a></li>
+                        <li><a href="#vegetable">Vegetable</a></li>
+                        <li><a href="#">Rice and Pasta</a></li>
+                        <li><a href="#">Snack</a></li>
+                        <li><a href="#">Soup</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span> Cuisine</a>
+                    <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                        <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span>Chinese</a></li>
+                        <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span>Indonesian</a></li>
+		 				<li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span>Japanese</a></li>
+		 				<li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span>Western</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-cloud-download fa-stack-1x "></i></span>Cooking Tips</a>
+                </li>
+
+                <li>
+                    <a href="#"> <span class="fa-stack fa-lg pull-left"><i class="fa fa-cart-plus fa-stack-1x "></i></span>Videos</a>
+                </li>
+
+                <li>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-youtube-play fa-stack-1x "></i></span>About</a>
+                </li>
+
+                <li>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-wrench fa-stack-1x "></i></span>Services</a>
+                </li>
+
+                <li>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-server fa-stack-1x "></i></span>Contact</a>
+                </li>
+
+            </ul>
+
+        </div><!-- /#sidebar-wrapper -->
+       
+
+	 <!-- Page Content -->
+
+<!--Main Page--> 
+		<div id="ingredients">
+    		<div id="page-content-wrapper">
+     			<div class="container-fluid">
+        			<div class="row">
+		 				<div class="col-lg-12" >
+            	    		<h1 class="page-header">Ingredients</h1>
+            			</div>
+
+           				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+           					<a class="thumbnail" href="#">
+                    		<img class="img-responsive" src="../Pictures/chicken.jpg" alt="">
+                    		Chicken
+                			</a>
+            			</div>
+            	
+            			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                			<a class="thumbnail" href="#">
+                   			<img class="img-responsive" src="../Pictures/beef.jpg" alt="">
+                   			Beef
+                			</a>
+            			</div>
+            	
+            			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                			<a class="thumbnail" href="#">
+                    		<img class="img-responsive" src="../Pictures/prawn.jpg" alt="">
+                    		Prawn
+                			</a>
+            			</div>
+            	
+            			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                			<a class="thumbnail" href="#vegetable">
+                		    <img class="img-responsive" src="../Pictures/vegetable.jpg" alt="">
+                		    Vegetable
+                			</a>
+            			</div>
+            	
+            			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                			<a class="thumbnail" href="#">
+                		    <img class="img-responsive" src="../Pictures/pork.jpg" alt="">
+                		    Pork
+                			</a>
+            			</div>
+            	
+            			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                			<a class="thumbnail" href="#">
+                		    <img class="img-responsive" src="../Pictures/seafood.png" alt="">
+                		    Seafood      
+     						</a>
+     					</div>	
+		        	
+		        	</div> <!--row-->
+				</div> <!--container fluid-->        	
+			</div> <!--page content wrapper-->
+		</div> <!--ingredients-->
+  
+        	
+        <!-- Vegetable Sub-page -->
+    	<div id="vegetable">
+			<div id="page-content-wrapper">
+    		   	<div class="container-fluid" >
+    		    	<div class="row">
+    		    
+			    	<div class="col-lg-12" >
+                			<h1 class="page-header">Vegetable</h1>
+            			</div>
+
+       				<div class="col-lg-3 col-md-4 col-xs-6 thumb">              	
+	                    <img class="img-responsive" src="../Pictures/Cauliflower & Broccoli Cheese.jpg" alt="">
+	                    Cauliflower & Broccoli Cheese                	
+	            	</div>
+
+	            	<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+	                	<a class="thumbnail" href="../recipes/Mashed Potato.png">
+	                   	<img class="img-responsive" src="../Pictures/Mashed Potato.png.jpg" alt="">
+	                   	Mashed Potato
+	                	</a>
+	            	</div>
+
+	            	<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+	                	<a class="thumbnail" href="#">
+	                    <img class="img-responsive" src="../Pictures/Kinoko Butter.jpg" alt="">
+	                    Kinoko Butter
+	                	</a>
+	            	</div>
+
+	            	<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+	                	<a class="thumbnail" href="#">
+	                    <img class="img-responsive" src="../Pictures/Kakiage.png.jpg" alt="">
+	                    Kakiage
+	                	</a>
+	            	</div>
+
+	            	<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+	                	<a class="thumbnail" href="#">
+	                    <img class="img-responsive" src="../Pictures/Caesar Salad.jpg" alt="">
+	                    Caesar Salad
+	                	</a>
+	            	</div>
+
+					<div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+	            		<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+  							<div class="flipper">
+    							<div class="front">
+      								<img src="../Pictures/Au Gratin Potato.jpg" alt="" />
+    							</div>
+    							<div class="back">
+      								<img src="../recipes/Au Gratin Potato.png" alt="" />
+    							</div>
+  							</div>
+						</div>	            	
+     <!--           <img class="img-responsive" src="../Pictures/Au Gratin Potato.jpg" alt="">
+	                    Au Gratin Potato-->
+	                </div>
+
+	
+        	</div> <!--row-->
+			</div> <!--container fluid-->
+		</div> <!--page content wrapper-->	      	
+	</div> <!--vegetable-->
+
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+       		<div class="modal-content">         
+       			<div class="modal-body">                
+       			</div>
+       		</div><!-- /.modal-content -->
+   		</div><!-- /.modal-dialog -->
+   	</div><!-- /.modal -->      
+
+    <hr> 
+
+ 	
+ 
+    <!-- Footer -->
+    <footer>
+ 		<div class="row">
+        	<div class="col-lg-12">
+            	<p>Copyright &copy; Your Website 2014</p>
+            </div>
+        </div>
+    </footer>
+
+</div> <!-- /#wrapper -->
+
+<!-- jQuery -->
+    <script src="../js/jquery-1.12.1.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/sidebar_menu.js"></script>
+    <script src="../js/photo-gallery.js"></script>
+    
+
+
+
+</body>  
+    
+</html>
