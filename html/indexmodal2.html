@@ -8,11 +8,25 @@
     <meta name="author" content="">
     <title>Simple Recipes</title>
     
+    <style>
+    .recipe {
+    max-width:100%;
+    max-height:100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+}
+    </style>
+    
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/simple_sidebars.css" rel="stylesheet">
     <link href="../css/font-awesome.css" rel="stylesheet">
     <link href="../css/thumbnail-gallery.css" rel="stylesheet">
+	<!--css for modal effects-->
+   <link rel="stylesheet" type="text/css" href="default.css"/>
+	<link rel="stylesheet" type="text/css" href="component.css" />
+
 
 	
   
@@ -148,6 +162,10 @@
   
         	
         <!-- Vegetable Sub-page -->
+       
+        
+        
+        
     	<div id="vegetable">
 			<div id="page-content-wrapper">
     		   	<div class="container-fluid" >
@@ -157,8 +175,12 @@
                 			<h1 class="page-header">Vegetable</h1>
             			</div>
 
-       				<div class="col-lg-3 col-md-4 col-xs-6 thumb">              	
-	                    <img class="img-responsive" src="../Pictures/Cauliflower & Broccoli Cheese.jpg" alt="">
+
+
+       				<div class="col-lg-3 col-md-4 col-xs-6 thumb ">              	
+	                    <a class="thumbnail" href="#vegetable">
+	                    <button class="md-trigger" data-modal="modal-1">Recipe</button>
+						<img class="img-responsive" src="../Pictures/Cauliflower & Broccoli Cheese.jpg" alt="">
 	                    Cauliflower & Broccoli Cheese                	
 	            	</div>
 	            	
@@ -172,7 +194,8 @@
 
 	            
 	            	<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-	                	<a class="thumbnail" href="#">
+	                	<a class="thumbnail" href="#vegetable">
+						<button class="md-trigger" data-modal="modal-2">Recipe</button>
 	                    <img class="img-responsive" src="../Pictures/Kinoko Butter.jpg" alt="">
 	                    Kinoko Butter
 	                	</a>
@@ -202,9 +225,31 @@
 			</div> <!--container fluid-->
 		</div> <!--page content wrapper-->	      	
 	</div> <!--vegetable-->
-
 	
- 	
+	
+	<!--Recipes-->
+	<div class="md-modal md-effect-1" id="modal-1">
+			<div class="md-content">
+				<h3>Cauliflower & Brocolli Cheese</h3>
+				<div>
+				<img class ="recipe" src="../recipes/Cauliflower&Brocolli Cheese.png" />
+					<button class="md-close">Close me!</button>
+				</div>	
+			</div> <!--md-content-->
+		</div> <!--md-modal md-effect-1-->
+        
+    	<div class="md-modal md-effect-1" id="modal-2">
+			<div class="md-content">
+				<h3>KINOKO BUTTER</h3>
+				<div>
+				<img class ="recipe" src="../recipes/Kinoko Butter.png"/>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+	
+	
+
  
     <!-- Footer -->
     <footer>
@@ -222,6 +267,14 @@
     <script src="../js/bootstrap.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/sidebar_menu.js"></script>
+    <!--js for modal-->
+    <script src="../js/modernizr.custom.js"></script>
+    <script src="../js/modalEffects.js"></script>
+    <script src="../js/classie.js"></script>
+
+
+
+
    
 </body>  
     
