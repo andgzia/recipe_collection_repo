@@ -10,13 +10,76 @@
     
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/simple_sidebars.css" rel="stylesheet">
+    <link href="../css/simple_sidebar.css" rel="stylesheet">
     <link href="../css/font-awesome.css" rel="stylesheet">
     <link href="../css/thumbnail-gallery.css" rel="stylesheet">
+    <link href="../css/flip_container.css" rel="stylesheet">
+	<!--modal-->
+    <!--<link rel="stylesheet" type="text/css" href="../../ModalWindowEffects/css/default.css" />-->
+	<link rel="stylesheet" type="text/css" href="../../ModalWindowEffects/css/component.css" />
+    
+	<script src="../js/jquery-1.12.1.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  	<!--sidebar menu-->
+    <script src="../js/sidebar_menu.js"></script>
+	<!--responsive modal-->
+    <script src="../js/photo-gallery.js"></script>
+	<!--modal-->
+	<script src="../../ModalWindowEffects/js/modernizr.custom.js"></script>
+	<script src="../../ModalWindowEffects/js/modalEffects.js"></script>
+   
+
 
 	
+    
+    
   
 </head>
+
+<style>
+    ul li img {
+          cursor: pointer;
+      }
+	.modal-body {
+		padding:5px !important;
+	}
+    .modal-content {
+        border-radius:0;
+    }
+    .modal-dialog img {
+        text-align:center;
+        margin:0 auto;
+    }
+    .controls{          
+        width:50px;
+        display:block;
+        font-size:11px;
+        padding-top:8px;
+        font-weight:bold;          
+    }
+    .next {
+        float:right;
+        text-align:right;
+    }
+ 
+    /*override modal for demo only*/
+    .modal-dialog {
+        max-width:500px;
+        padding-top: 90px;
+    }
+    @media screen and (min-width: 768px){
+        .modal-dialog {
+         	width:500px;
+            padding-top: 90px;
+        }          
+    }
+    @media screen and (max-width:1500px){
+        #ads {
+        	display:none;
+        }
+    }
+  </style>
 
 
 <body>
@@ -157,26 +220,28 @@
                 			<h1 class="page-header">Vegetable</h1>
             			</div>
 
-       				<div class="col-lg-3 col-md-4 col-xs-6 thumb">              	
-	                    <img class="img-responsive" src="../Pictures/Cauliflower & Broccoli Cheese.jpg" alt="">
-	                    Cauliflower & Broccoli Cheese                	
-	            	</div>
-	            	
+       				<div class="col-lg-3 col-md-4 col-xs-6 thumb">    
+       					<a class="thumbnail" href="#">
+       					<img class="img-responsive md-trigger" data-modal="modal-1" src="../Pictures/Cauliflower & Broccoli Cheese.jpg" alt="">
+						Cauliflower Broccoli Cheese  
+						</a>              	
+       				</div>	       			
+     	
 	            	<div class="col-lg-3 col-md-4 col-xs-6 thumb">
 	                	<a class="thumbnail" href="#">
-	                    <img class="img-responsive" src="../Pictures/Mashed Potato.jpg" alt="">
-	                  	Mashed Potato
-
+	                   	<img class="img-responsive" src="../Pictures/Mashed Potato.jpg" alt="">
+	                   	Mashed Potato
 	                	</a>
 	            	</div>
 
-	            
 	            	<div class="col-lg-3 col-md-4 col-xs-6 thumb">
 	                	<a class="thumbnail" href="#">
 	                    <img class="img-responsive" src="../Pictures/Kinoko Butter.jpg" alt="">
 	                    Kinoko Butter
 	                	</a>
 	            	</div>
+
+	            	
 
 	            	<div class="col-lg-3 col-md-4 col-xs-6 thumb">
 	                	<a class="thumbnail" href="#">
@@ -192,9 +257,19 @@
 	                	</a>
 	            	</div>
 
-	            	<div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
-                <img class="img-responsive" src="../Pictures/Au Gratin Potato.jpg" alt="">
-	                    Au Gratin Potato
+					<div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+	            		<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+  							<div class="flipper">
+    							<div class="front">
+      								<img src="../Pictures/Au Gratin Potato.jpg" alt="" />
+    							</div>
+    							<div class="back">
+      								<img src="../recipes/Au Gratin Potato.png" alt="" />
+    							</div>
+  							</div>
+						</div>	            	
+     <!--           <img class="img-responsive" src="../Pictures/Au Gratin Potato.jpg" alt="">
+	                    Au Gratin Potato-->
 	                </div>
 
 	
@@ -203,7 +278,17 @@
 		</div> <!--page content wrapper-->	      	
 	</div> <!--vegetable-->
 
-	
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+       		<div class="modal-content">         
+       			<div class="modal-body">                
+       			</div>
+       		</div><!-- /.modal-content -->
+   		</div><!-- /.modal-dialog -->
+   	</div><!-- /.modal -->      
+
+    <hr> 
+
  	
  
     <!-- Footer -->
@@ -222,7 +307,11 @@
     <script src="../js/bootstrap.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/sidebar_menu.js"></script>
-   
+    <script src="../js/photo-gallery.js"></script>
+    
+
+
+
 </body>  
     
 </html>
